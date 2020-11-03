@@ -1,0 +1,8 @@
+site_name: Texture Splitter AI
+nav:
+  - Home: 'index.md'
+  - About: 'about.md'
+  - Installation: 'installation.md'
+  - Contact: 'contact.md'
+  - Author: 'author.md'
+  - FAQ: 'FAQ.md'
