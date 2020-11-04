@@ -10,5 +10,5 @@
 + + option 1 requires adminstrator rights, and will then proceed to pip
 into Blenders python site-packages
 + + option 2 will install to the user directory, because this will ensure no permission errors
-+ + Either option will freeze Blender, so don't panic
-+ + open Blenders console window before clicking install to keep track of installation
++ + + Either option will freeze Blender, so don't panic
++ + + open Blenders console window before clicking install to keep track of installation
