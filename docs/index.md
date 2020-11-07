@@ -32,3 +32,15 @@ Reason is, there might be slight differences between the results of each patch
 and then the border will of each patch will be visible.
 
 ![Screenshot](img/tiles.png)
+
+
+## Tips and tricks
+
++ The addon will accept UV maps. The way it handles is by inpainting.
+This means If you load an image with an alpha channel, it will try and
+paint in the empty area with a nearest neighbor algorithm.
+![Screenshot](img/body_diff.png)
+![Screenshot](img/test.png)
+
++ sometimes you will encounter that the normal map direction is wrong.
+Just seperate the RGB channels invert R and G and merge them back together again

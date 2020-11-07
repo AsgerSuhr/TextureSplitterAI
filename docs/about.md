@@ -13,6 +13,10 @@ past it's able to generate a prediction of textures from any kind of input image
 + <del> fix memory issues on large images <del>
 + <del> UV support <del>
 + <del> seamless AI stitching of image patches <del>
-+ remove secondary window and implement completely into Blenders UI
++ <del> remove secondary window and implement completely into Blenders UI <del>
 + fix Linux installation
-+ image editing tools (PixPlan inspired)
++ When training GANs train on 512x512 images and split them into four,
+feed them to the generator and stitch them together afterwards. Then give them to the discriminator,
+hopefully this will teach the generator to create better edges for stitching images together again.
+Maybe even random sized tiles that are fed to the generator.
++ implement Super Resolution GAN to remove need of stitching, and improve perfomance (idea)
