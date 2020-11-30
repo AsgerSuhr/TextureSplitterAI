@@ -97,10 +97,6 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#how-does-it-work" class="nav-link">How does it work?</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
             <li class="nav-item" data-level="2"><a href="#tips-and-tricks" class="nav-link">Tips and tricks</a>
               <ul class="nav flex-column">
               </ul>
@@ -115,28 +111,15 @@
 <h1 id="texture-splitter-ai">Texture Splitter AI</h1>
 <p>Made by Asger Suhr Langhoff</p>
 <h2 id="overview">Overview</h2>
-<p>Texture Splitter AI is a Generative Adversarial Network (GAN), discovered
-by Ian Goodfellow in 2014. It's able to generate textures from a single input
-image. It's able to do this because it has looked on thousands of images of
-normal maps, height maps, diffuse maps and so on. From what it has seen in the
-past it's able to generate a prediction of textures from any kind of input image.</p>
+<p>Texture Splitter AI is a neural network. It's trying to remove the hassle of creating all the different texture maps, that make up a PBR texture. </p>
 <h2 id="how-to-use-it">How to use it</h2>
 <p>It's fairly straightforward to use, once it's installed.
 just navigate to blenders shader editor, and open the sidebar (hotkey: "n")
-and click the tab "Texture Splitter AI" and the button "Load AI"</p>
-<p>A new window will pop up, and here you can click the load Image button.
-Select your desired image, and click the "generate textures" button.
+and click the tab "AI Splitter".</p>
+<p>Here you can click the load Image button. You can chose between two methods, "Simple" or "Resize". The "Simple" mtehod simply takes the image as it is and runs the AI's on the image. The "Resize" method takes the image and resizes it for the AI's. Both methods will return an image of the same dimensions as the original image, the reason for the resize option is to avoid too big computations. </p>
+<p>Now Click the "generate textures" button. 
 The time it takes to generate textures depends on your image size, and you graphics card.</p>
-<h2 id="how-does-it-work">How does it work?</h2>
-<p>The program splits input image to squares of 256x256. This is simply
-because it's too heavy to run the AI on larger images (like 4k images).
-It will freeze your computer (trust me, I've tried). Then once it's done
-with all the "patches" of your image, I use another AI to stitch them
-together again. "Why use another AI?" I hear you ask. Well my curious friend,
-it's simply because if I just put the patches back together, the image will look tiled.
-Reason is, there might be slight differences between the results of each patch
-and then the border will of each patch will be visible.</p>
-<p><img alt="Screenshot" src="img/tiles.png" /></p>
+<p>When it's done you can click the "Add to Material" button, which will add the textures to the current material, in a little neat node group. </p>
 <h2 id="tips-and-tricks">Tips and tricks</h2>
 <ul>
 <li>
@@ -147,8 +130,7 @@ paint in the empty area with a nearest neighbor algorithm.
 <img alt="Screenshot" src="img/test.png" /></p>
 </li>
 <li>
-<p>sometimes you will encounter that the normal map direction is wrong.
-Just seperate the RGB channels invert R and G and merge them back together again</p>
+<p>sometimes you will encounter that the normal map direction is wrong. Try flipping the G channel or R channel</p>
 </li>
 </ul></div>
             </div>
@@ -234,5 +216,5 @@ Just seperate the RGB channels invert R and G and merge them back together again
 
 <!--
 MkDocs version : 1.1.2
-Build Date UTC : 2020-11-08 20:16:24.933830+00:00
+Build Date UTC : 2020-11-30 11:52:11.611905+00:00
 -->
